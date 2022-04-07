@@ -1,13 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Oswald:wght@200;400;500;700&family=Poppins:wght@200;300;500&family=Roboto+Condensed:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&family=Work+Sans:wght@200;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Oswald', sans-serif;
+  /* font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Work Sans', sans-serif */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.section {
+ @apply mt-16 md:mt-40 relative 
+}
+
+.grid-system {
+  @apply grid grid-cols-1 md:grid-cols-2 md:gap-16
+}
+
+.card-feature {
+  @apply rounded-lg p-5 flex flex-col relative md:h-[100%]
+}
+
+.list-items-phone {
+  @apply z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
+  flex flex-col justify-start items-end rounded-md text-white bg-secondary 
+}
+
+.accordion__button {
+  @apply flex items-center
 }
